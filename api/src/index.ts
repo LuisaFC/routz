@@ -1,7 +1,13 @@
 import express from 'express';
+import mongoose from 'mongoose';
 
-const app = express();
+mongoose.connect('mongodb://localhost:27018')
+  .then(() => {
+    const app = express();
 
-const port = 3002
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`)})
+    const port = 3002
+    app.listen(port, () => {
+      console.log(`Server is running on http://localhost:${port}`)
+    })
+  })
+  .catch(() => console.log('Could not connect to mongo'))
