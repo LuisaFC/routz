@@ -17,7 +17,6 @@ export const User = model('User', new Schema({
     type: [{
       destination: {
         type: Schema.Types.ObjectId,
-        required: true,
         ref: 'Destination'
       },
     }],
@@ -26,7 +25,6 @@ export const User = model('User', new Schema({
     type: [{
       routes: {
         type: Schema.Types.ObjectId,
-        required: true,
         ref: 'Route'
       }
     }]
