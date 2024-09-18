@@ -13,9 +13,5 @@ export const Route = model('Route', new Schema({
         ref: 'Destination'
       },
     }],
-  },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
   }
 }));
