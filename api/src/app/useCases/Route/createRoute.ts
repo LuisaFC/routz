@@ -3,9 +3,9 @@ import { Route } from '../../models/Route'
 
 export async function createRoute(req: Request, res: Response){
   try {
-    const {name, destinations, user} = req.body;
+    const {name, destinations} = req.body;
 
-    const route = await Route.create({name, destinations, user})
+    const route = await Route.create({name, destinations})
 
     res.status(201).json(route)
 

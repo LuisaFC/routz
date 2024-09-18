@@ -3,8 +3,6 @@ import { listDestionations } from './app/useCases/Destination/listDestinations';
 import { createDestination } from './app/useCases/Destination/createDestination';
 import { listRoutes } from './app/useCases/Route/listRoutes';
 import { createRoute } from './app/useCases/Route/createRoute';
-import { createtUser } from './app/useCases/User/createUser';
-import { listUsers } from './app/useCases/User/listUser';
 
 
 export const router = Router();
@@ -28,10 +26,8 @@ router.post('/routes', createRoute)
 //delete route
 
 //create User
-router.post('/users', createtUser)
 
 // List users
-router.get('/users', listUsers)
 
 //List fav destinations
 
