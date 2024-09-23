@@ -5,6 +5,7 @@ import { listRoutes } from './app/useCases/Route/listRoutes';
 import { createRoute } from './app/useCases/Route/createRoute';
 import { deleteDestination } from './app/useCases/Destination/deleteDestination';
 import { deleteRoute } from './app/useCases/Route/deleteRoute';
+import { addDestinationToRoute } from './app/useCases/Route/addDestinationToRoute';
 
 
 export const router = Router();
@@ -25,6 +26,9 @@ router.get('/routes', listRoutes)
 
 //Create Route
 router.post('/routes', createRoute)
+
+// Add new destination to route arrat
+router.patch('/routes/:routeId/add', addDestinationToRoute)
 
 //List Route by name
 
