@@ -1,8 +1,11 @@
+import { Header } from './components/Header';
+import { ThemeContext } from './context/ThemeContext';
+
 function App() {
 	return (
-		<div>
-			<h1>Hello</h1>
-		</div>
+		<ThemeContext defaultTheme="dark" storageKey="vite-ui-theme">
+			<Header />
+		</ThemeContext>
 	);
 }
 
